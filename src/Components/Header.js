@@ -14,15 +14,17 @@ function Header() {
       <img src="/images/logo.svg" alt="Tesla Logo"></img>
       <Menu>
         {cars &&
-          cars.map((car, index) => (
-            <a key={index} href="#">
+          cars.map((car, index, url) => (
+            <a key={index} href={url}>
               {car}
             </a>
           ))}
+          <a href="">Solar Roof</a>
+          <a href="">Solar Panels</a>
       </Menu>
       <RightMenu>
-        <a href="#">Shop</a>
-        <a href="#">Account</a>
+        <a href="https://shop.tesla.com/">Shop</a>
+        <a href="https://auth.tesla.com/oauth2/v1/authorize?redirect_uri=https%3A%2F%2Fwww.tesla.com%2Fteslaaccount%2Fowner-xp%2Fauth%2Fcallback&response_type=code&client_id=ownership&scope=offline_access%20openid%20ou_code%20email&audience=https%3A%2F%2Fownership.tesla.com%2F&locale=en-US">Account</a>
       </RightMenu>
       <CustomMenu onClick={() => setBurgerStatus(true)} />
       <BurgerNav show={burgerStatus}>
@@ -30,9 +32,9 @@ function Header() {
           <CustomClose onClick={() => setBurgerStatus(false)} />
         </CloseWrap>
         {cars &&
-          cars.map((car, index) => (
+          cars.map((car, index, url) => (
             <li key={index}>
-              <a href="#">{car}</a>
+              <a href={url}>{car}</a>
             </li>
           ))}
         <li>
@@ -80,16 +82,16 @@ const Container = styled.div`
 `;
 const Menu = styled.div`
   display: flex;
-  align-items: center;
   justify-content: center;
   flex: 1;
+  padding:0 0 0 60px;
   a {
+    font-size: 19px;
     font-weight: 600;
-    text-transform: uppercase;
     padding: 0 10px;
     flex-wrap: nowrap;
   }
-  @media (max-width: 790px) {
+  @media (max-width: 1000px) {
     display: none;
   }
 `;
@@ -98,9 +100,9 @@ const RightMenu = styled.div`
   align-items: center;
   a {
     font-weight: 600;
-    text-transform: uppercase;
     margin-right: 10px;
     flex-wrap: nowrap;
+    padding:10px;
   }
 `;
 const CustomMenu = styled(MenuIcon)`
