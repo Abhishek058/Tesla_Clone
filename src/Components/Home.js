@@ -33,7 +33,20 @@ function Home() {
         leftBtnText="CUSTOM ORDER"
         rightBtnText="EXISTING INVENTORY"
       />
-      
+      <Section
+        title="Solar Panels"
+        description="Lowest Cost Solar Panels in America"
+        backgroundImg="solar-panel.jpg"
+        leftBtnText="ORDER NOW"
+        rightBtnText="LEARN MORE"
+      />
+      <Section
+        title="Solar Roof"
+        description="Produce Clean Energy From Your Roof"
+        backgroundImg="solar-roof.jpg"
+        leftBtnText="ORDER NOW"
+        rightBtnText="LEARN MORE"
+      />
     </Container>
   );
 }
