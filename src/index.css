@@ -25,10 +25,12 @@ body {
   }
 }
 
-h1{
-    font-size: 40px;
+h1 {
+  font-size: 40px;
 }
-
-p{
-    margin-top: 10px;
+#home_p {
+  margin-top: 10px;
+}
+a{
+  text-decoration: none;
 }

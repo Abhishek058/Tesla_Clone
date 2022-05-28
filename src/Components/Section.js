@@ -12,7 +12,7 @@ function Section({
     <Wrap bgImage={backgroundImg}>
       <ItemText>
         <h1>{title}</h1>
-        <p>{description}</p>
+        <p id="home_p">{description}</p>
       </ItemText>
       <Buttons>
         <ButtonGroup>
@@ -62,7 +62,6 @@ const LeftButton = styled.div`
   border-radius: 100px;
   opacity: 0.9;
   font-size: 15px;
-  font-weight: 600;
   cursor: pointer;
   margin: 8px;
   @media (max-width: 620px) {
